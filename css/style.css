@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: rgb(41, 39, 39); */
+}
+
+.container {
+    width: 90%;
+    height: 600px;
+    /* outline: 3px solid crimson; */
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns:repeat(10, 1fr);
+    /*Una de las maneras de crear columnas con css GRID*/
+    /*grid-template-columns: 30%, 50px, 100px;  */
+    /* grid-auto-rows: auto; */
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: 100px, 200px;
+    gap: 10px;
+    grid-template-areas:
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element3 element3 element4 element4"
+    "element1 element1 element1 element1 element1 element1 element3 element3 element4 element4"
+    "element1 element1 element1 element1 element1 element1 element3 element3 element4 element4"
+    "element5 element5 element5 element5 element5 element5 element5 element5 element5 element5"
+    "element6 element6 element6 element6 element6 element6 element6 element6 element6 element6"   
+    ;
+}
+
+.item{
+    /* width: 100px; */
+    /* height: 100px; */
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3%;
+}
+
+.item1 {
+    background-color: aqua;
+    /* grid-column: 1 / 7;
+    grid-row: 1 / 8; */
+    grid-area: element5;
+     background-image: linear-gradient(to bottom, transparent, rgb(176, 82, 82)), url(../img/img1.jpg);
+    
+}
+
+.item2 {
+    background-color: blueviolet;
+    /* grid-column: 7 / -1;
+    grid-row: 1 / 5; */
+    grid-area: element6;
+    background-image: linear-gradient(to left, transparent, rgb(26, 24, 24)), url(../img/img3.jpg);
+    box-shadow: ;
+    
+}
+
+.item3 {
+    /* background-color: chartreuse; */
+    /* grid-column: 7 / 9;
+    grid-row: 5 / 8; */
+    grid-area: element1;
+    background-image: linear-gradient(to top right,  rgba(13, 12, 12, 0.5),
+     rgba(248, 84, 7, 0.4),
+     rgba(143, 15, 241, 0.4),
+     rgba(241, 14, 14, 0.4)), url(../img/img2.jpg);
+    box-shadow: 5px 5px 15px #888888;
+}
+
+.item4 {
+    background-color: chocolate;
+    /* grid-column: 9 / -1;
+    grid-row: 5 / 8; */
+    grid-area: element4;
+    background-image: linear-gradient(to bottom, transparent, rgb(230, 96, 212)),url(../img/img4.jfif);
+    box-shadow: 5px 5px 15px #888888;
+}
+
+.item5 {
+    background-color: tomato;
+    /* grid-column: 1 / -1; */
+    grid-area: element2;
+    background-image: linear-gradient(to bottom, transparent, rgb(10, 228, 39)), url(../img/img5.jpg);
+    box-shadow: 5px 10px 15px #888888
+}
+
+.item6 {
+    background-color: violet;
+    /* grid-column: 1 / -1; */
+    grid-area: element3;
+    background-image: linear-gradient(to bottom, transparent, rgb(164, 54, 164)), url(../img/img7.jfif);
+    box-shadow: 5px 5px 15px #888888;k
+
+}
+
+@media (min-width: 700px) {
+
+    .container {
+    grid-template-areas:
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element2 element2 element2 element2"
+    "element1 element1 element1 element1 element1 element1 element3 element3 element4 element4"
+    "element1 element1 element1 element1 element1 element1 element3 element3 element4 element4"
+    "element1 element1 element1 element1 element1 element1 element3 element3 element4 element4"
+    "element1 element1 element1 element1 element1 element1 element5 element5 element5 element5"
+    "element6 element6 element6 element6 element6 element6 element6 element6 element6 element6";
+    }
+       
+}
